@@ -2,8 +2,9 @@
 resolver = "2"
 members = [
     "examples/*/",
-    # "projects/*/", Add when existing projects
-    # "exercises/*/", Add when existing exercises
+    # Uncomment these as you create projects/exercises:
+    # "projects/*/", 
+    # "exercises/*/",
 ]
 
 # Exclude certain directories from the workspace if needed
@@ -14,11 +15,11 @@ exclude = [
 ]
 
 [workspace.package]
-authors = ["Daniel SB <dasobral93@gmaile.com>"]
+authors = ["Daniel SB <your-email@example.com>"]
 edition = "2021"
 license = "MIT"
-repository = "https://github.com/dasobral/rust-hoex"
-rust-version = "1.88"
+repository = "https://github.com/yourusername/rust-hoex"
+rust-version = "1.70"
 
 [workspace.dependencies]
 # Common dependencies used across examples
@@ -60,8 +61,8 @@ unused_qualifications = "warn"
 [workspace.lints.clippy]
 # Code quality lints
 enum_glob_use = "deny"
-pedantic = "warn"
-nursery = "warn"
+pedantic = { level = "warn", priority = -1 }
+nursery = { level = "warn", priority = -1 }
 unwrap_used = "deny"
 expect_used = "warn"
 panic = "deny"

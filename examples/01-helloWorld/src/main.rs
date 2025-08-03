@@ -6,22 +6,8 @@
 // 2. Run the program: cargo run
 //
 // Key concepts demonstrated:
-// - [Add concepts here]
+// - This is a simple Rust program that prints "Hello from 01-helloWorld!" to the console using the println! macro.
 
 fn main() {
-    println!("Hello from 01-helloWorld!");
-    
-    // TODO: Implement your code here
-    todo!("Implement the main functionality");
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_basic_functionality() {
-        // TODO: Add tests
-        assert_eq!(2 + 2, 4);
-    }
+    println!("Hello from helloWorld!");
 }
