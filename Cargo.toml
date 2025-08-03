@@ -1,0 +1,74 @@
+[workspace]
+resolver = "2"
+members = [
+    "examples/*/",
+    # "projects/*/", Add when existing projects
+    # "exercises/*/", Add when existing exercises
+]
+
+# Exclude certain directories from the workspace if needed
+exclude = [
+    "docs",
+    "utils",
+    "benchmarks",
+]
+
+[workspace.package]
+authors = ["Daniel SB <dasobral93@gmaile.com>"]
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/dasobral/rust-hoex"
+rust-version = "1.88"
+
+[workspace.dependencies]
+# Common dependencies used across examples
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Async runtime
+tokio = { version = "1.0", features = ["full"] }
+
+# Command-line parsing
+clap = { version = "4.0", features = ["derive"] }
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Networking
+reqwest = { version = "0.11", features = ["json"] }
+
+# Testing
+criterion = "0.5"
+
+# Logging
+log = "0.4"
+env_logger = "0.10"
+
+# Utilities
+rand = "0.8"
+chrono = { version = "0.4", features = ["serde"] }
+
+[workspace.lints.rust]
+# Enforce safety by default
+unsafe_code = "forbid"
+unused_extern_crates = "warn"
+unused_import_braces = "warn"
+unused_qualifications = "warn"
+
+[workspace.lints.clippy]
+# Code quality lints
+enum_glob_use = "deny"
+pedantic = "warn"
+nursery = "warn"
+unwrap_used = "deny"
+expect_used = "warn"
+panic = "deny"
+todo = "warn"
+unimplemented = "warn"
+
+# Allow certain pedantic lints that can be overly strict for learning examples
+module_name_repetitions = "allow"
+similar_names = "allow"
+too_many_lines = "allow"
