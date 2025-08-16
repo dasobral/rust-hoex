@@ -216,7 +216,7 @@ After sourcing `utils/aliases.sh`, you get these commands:
 - `rust-fmt` - Format all code
 - `rust-clippy` - Run clippy linter on workspace
 
-## Development Workflow
+## Workflow
 
 1. **Setup**: Run `./setup.sh` to install dependencies
 2. **Development**: Work in individual example/project directories

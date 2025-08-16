@@ -2,6 +2,26 @@
 
 # rust-hoex alias setup
 # Source this file to add convenient aliases for the repository
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]] && ( [[ "$1" == "--help" ]] || [[ "$1" == "-h" ]] ); then
+    echo "🦀 Rust learning aliases loaded!"
+    echo
+    echo "Available commands:"
+    echo "  rust-create <type> <name> [description]  - Create new module"
+    echo "  rust-example <name> [description]        - Create new example"
+    echo "  rust-exercise <name> [description]       - Create new exercise"
+    echo "  rust-project <name> [description]        - Create new project"
+    echo "  rust-check                               - Run quality checks"
+    echo "  rust-test                                - Run all tests"
+    echo "  rust-build                               - Build workspace"
+    echo "  rust-fmt                                 - Format all code"
+    echo "  rust-clippy                              - Run clippy on workspace"
+    echo
+    echo "Examples:"
+    echo "  rust-example 11-collections \"Working with Vec and HashMap\""
+    echo "  rust-project web-api \"Simple REST API with axum\""
+    echo "  rust-exercise fizzbuzz \"Classic FizzBuzz implementation\""
+    exit 0
+fi
 
 # Get the absolute path to the repository root
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -64,21 +84,3 @@ rust-clippy() {
 # Export functions so they're available in the shell
 export -f rust-create rust-example rust-exercise rust-project
 export -f rust-check rust-test rust-build rust-fmt rust-clippy
-
-echo "🦀 Rust learning aliases loaded!"
-echo
-echo "Available commands:"
-echo "  rust-create <type> <name> [description]  - Create new module"
-echo "  rust-example <name> [description]        - Create new example"
-echo "  rust-exercise <name> [description]       - Create new exercise"
-echo "  rust-project <name> [description]        - Create new project"
-echo "  rust-check                               - Run quality checks"
-echo "  rust-test                                - Run all tests"
-echo "  rust-build                               - Build workspace"
-echo "  rust-fmt                                 - Format all code"
-echo "  rust-clippy                              - Run clippy on workspace"
-echo
-echo "Examples:"
-echo "  rust-example 11-collections \"Working with Vec and HashMap\""
-echo "  rust-project web-api \"Simple REST API with axum\""
-echo "  rust-exercise fizzbuzz \"Classic FizzBuzz implementation\""
