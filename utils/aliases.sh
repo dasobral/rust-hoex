@@ -28,7 +28,7 @@ REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 # Function to create a new rust module (example, exercise, or project)
 rust-create() {
-    "$REPO_ROOT/utils/create-module.sh" "$@"
+    "$REPO_ROOT/utils/creator.sh" "$@"
 }
 
 # Convenient shortcuts for specific types

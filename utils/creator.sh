@@ -84,7 +84,7 @@ create_cargo_toml() {
 [package]
 name = "$package_name"
 version = "0.1.0"
-edition = "2021"
+edition = "2025"
 authors.workspace = true
 license.workspace = true
 repository.workspace = true

@@ -1,0 +1,16 @@
+[package]
+name = "variables"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Cryptographic entropy and password strength analysis - demonstrating variables in Rust"
+
+[dependencies]
+# No external dependencies needed for this example
+# All functionality uses Rust standard library
+
+[[bin]]
+name = "variables"
+path = "src/main.rs"
