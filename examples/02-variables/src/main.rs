@@ -25,7 +25,7 @@ fn main() {
     // === Variable Declaration and Type Inference ===
 
     // Immutable variables (default in Rust) cannot change after initial assignment
-    let test_password = "Pepe"; // Type inferred as &str
+    let test_password = "!Pep3ThyFr0g7"; // Type inferred as &str
     let password_length = test_password.len(); // Type inferred as usize
 
     // Explicit type annotations

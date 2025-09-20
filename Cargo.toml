@@ -2,9 +2,9 @@
 resolver = "2"
 members = [
     "examples/*/",
+    "exercises/*/"
     # Uncomment these as you create projects/exercises:
-    # "projects/*/", 
-    # "exercises/*/",
+    # "projects/*/"
 ]
 
 # Exclude certain directories from the workspace if needed

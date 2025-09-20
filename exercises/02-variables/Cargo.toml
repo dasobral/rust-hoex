@@ -1,0 +1,20 @@
+[package]
+name = "variables"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Advanced variable concepts through physics problems - signed ints, overflow, type conversion"
+
+[dependencies]
+clap = { workspace = true }        # CLI argument parsing
+anyhow = { workspace = true }      # Error handling
+
+[lib]
+name = "variables_exercises"
+path = "src/lib.rs"
+
+[[bin]]
+name = "variables"
+path = "src/main.rs"
