@@ -1,0 +1,21 @@
+[package]
+name = "example_closures"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Anonymous functions — closures for sorting and filtering threat events"
+
+[dependencies]
+
+[lib]
+name = "example_closures"
+path = "src/lib.rs"
+
+[[bin]]
+name = "example_closures"
+path = "src/main.rs"
+
+[lints]
+workspace = true

@@ -1,0 +1,21 @@
+[package]
+name = "example_testing"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Unit and integration tests for a password policy library"
+
+[dependencies]
+
+[lib]
+name = "example_testing"
+path = "src/lib.rs"
+
+[[bin]]
+name = "example_testing"
+path = "src/main.rs"
+
+[lints]
+workspace = true
