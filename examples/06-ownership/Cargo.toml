@@ -1,0 +1,21 @@
+[package]
+name = "example_ownership"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Ownership rules through secure password handling — moves, Clone, Copy, and Drop"
+
+[dependencies]
+
+[lib]
+name = "example_ownership"
+path = "src/lib.rs"
+
+[[bin]]
+name = "example_ownership"
+path = "src/main.rs"
+
+[lints]
+workspace = true

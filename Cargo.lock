@@ -105,7 +105,39 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1d07550c9036bf2ae0c684c4297d503f838287c83c53686d05370d0e139ae570"
 
 [[package]]
+name = "example_borrowing"
+version = "0.1.0"
+
+[[package]]
+name = "example_controlflow"
+version = "0.1.0"
+
+[[package]]
+name = "example_datatypes"
+version = "0.1.0"
+
+[[package]]
+name = "example_enums"
+version = "0.1.0"
+
+[[package]]
+name = "example_functions"
+version = "0.1.0"
+
+[[package]]
 name = "example_helloworld"
+version = "0.1.0"
+
+[[package]]
+name = "example_modules"
+version = "0.1.0"
+
+[[package]]
+name = "example_ownership"
+version = "0.1.0"
+
+[[package]]
+name = "example_structs"
 version = "0.1.0"
 
 [[package]]

@@ -1,0 +1,21 @@
+[package]
+name = "example_borrowing"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "References and borrowing — analyze passwords without taking ownership"
+
+[dependencies]
+
+[lib]
+name = "example_borrowing"
+path = "src/lib.rs"
+
+[[bin]]
+name = "example_borrowing"
+path = "src/main.rs"
+
+[lints]
+workspace = true
