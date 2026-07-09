@@ -1,5 +1,5 @@
 [package]
-name = "variables"
+name = "exercise_variables"
 version = "0.1.0"
 edition = "2024"
 authors.workspace = true
@@ -16,5 +16,8 @@ name = "variables_exercises"
 path = "src/lib.rs"
 
 [[bin]]
-name = "variables"
+name = "exercise_variables"
 path = "src/main.rs"
+
+[lints]
+workspace = true

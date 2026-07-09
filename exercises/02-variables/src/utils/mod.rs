@@ -1,10 +1,10 @@
 //! This module provides shared utilities and constants across all the exercises in this topic:
-//! //! - Physical and mathematical constants
-//! - Unit conversion functions  
+//! - Physical and mathematical constants
+//! - Unit conversion functions
 //! - Display formatting helpers
 //!
 //! # Organization
-//! 
+//!
 //! - [`constants`] - Physical constants and mathematical values
 //! - [`conversions`] - Unit conversion functions (temperature, energy, etc.)
 //! - [`display`] - Formatting helpers for scientific notation and units
