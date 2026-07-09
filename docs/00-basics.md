@@ -1,6 +1,6 @@
 # Rust Basics: Understanding Your Learning Environment
 
-Welcome to your Rust learning journey! This document explains the basic structure and concepts you'll encounter throughout this repository.
+Welcome to rust-hoex. This document explains the module layout and concepts you will see across the tutorial. For the full ordered checklist, see [LEARNING_PATH.md](LEARNING_PATH.md).
 
 ## Table of Contents
 
@@ -90,7 +90,8 @@ mod tests {
 
 - A placeholder that compiles but panics when executed
 - Useful during development to mark unfinished code
-- Replace it with actual implementation as you learn
+- `./utils/creator.sh` scaffolds still include `todo!()` — that is intentional for new modules
+- Completed examples in this repo already replace it with real code; replace it yourself when you create new modules
 
 ## Testing in Rust
 
@@ -242,25 +243,20 @@ Don't worry about understanding this yet - it's Rust's superpower for memory saf
 
 ### Typical Development Cycle
 
-1. **Create a new module:**
-
-   ```bash
-   rust-example 02-variables "Learning about variables"
-   ```
-
-2. **Navigate to the directory:**
+1. **Open an existing example** (or create a new scaffold):
 
    ```bash
    cd examples/02-variables
+   # or: ./utils/creator.sh example 24-foo "Description"
    ```
 
-3. **Edit the code:**
+2. **Edit and learn:**
 
-   - Open `src/main.rs` in your editor
-   - Replace `todo!()` with actual code
-   - Add meaningful tests
+   - Read `README.md` for goals and exercises
+   - Study `src/main.rs` (and any `src/lib.rs` / modules)
+   - For new scaffolds only: replace `todo!()` with real code
 
-4. **Run and test:**
+3. **Run and test:**
 
    ```bash
    cargo run          # Run the program
@@ -270,10 +266,11 @@ Don't worry about understanding this yet - it's Rust's superpower for memory saf
    cargo fmt          # Format code
    ```
 
-5. **Document your learning:**
-   - Update the README.md
-   - Add comments explaining concepts
-   - Note what you learned
+   From the repo root you can also use `cargo run -p example_variables`.
+
+4. **Document your learning:**
+   - Notes in the example README or your own scratchpad
+   - Follow [LEARNING_PATH.md](LEARNING_PATH.md) for what to do next
 
 ### Cargo Commands Reference
 
@@ -331,15 +328,14 @@ println!("{:?}", vec); // [1, 2]
 
 ## Next Steps
 
-Now that you understand the basic structure:
+The tutorial examples (`examples/01-helloWorld` through `23-unsafe`) are already written. Suggested path:
 
-1. Create your first example: `rust-example 01-helloWorld "My first Rust program"`
-2. Explore the generated code
-3. Replace `todo!()` with some simple code
-4. Run tests and see them pass
-5. Move on to variables, data types, and functions
+1. Follow [LEARNING_PATH.md](LEARNING_PATH.md)
+2. Start with `cd examples/01-helloWorld && cargo run` (or `cargo run -p example_helloworld`)
+3. Read [01-fundamentals.md](01-fundamentals.md) as you work through examples 02–07
+4. Use `./utils/creator.sh` (or `rust-example`) only when you want a fresh scaffold with `todo!()`
 
-Remember: Rust has a learning curve, but it's worth it. The compiler is your friend - it catches bugs before they become problems!
+Remember: Rust has a learning curve, but it's worth it. The compiler is your friend — it catches bugs before they become problems!
 
 ## Resources for This Section
 
