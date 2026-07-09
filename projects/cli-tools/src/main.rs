@@ -10,7 +10,9 @@ use std::io::{self, BufRead, Write};
 
 use anyhow::{Context, Result, bail};
 use clap::{Parser, Subcommand};
-use project_cli_tools::{AnalysisReport, CharClass, EntropyEstimate, analyze_password, estimate_entropy};
+use project_cli_tools::{
+    AnalysisReport, CharClass, EntropyEstimate, analyze_password, estimate_entropy,
+};
 
 /// Password entropy and strength checker (rust-hoex capstone).
 #[derive(Parser, Debug)]
@@ -89,7 +91,11 @@ fn print_analysis(report: &AnalysisReport) -> Result<()> {
         "classes:        {}",
         format_classes(&report.entropy.classes)
     )?;
-    writeln!(out, "class counts:   {}", format_counts(&report.class_counts))?;
+    writeln!(
+        out,
+        "class counts:   {}",
+        format_counts(&report.class_counts)
+    )?;
     if report.findings.is_empty() {
         writeln!(out, "findings:       (none)")?;
     } else {

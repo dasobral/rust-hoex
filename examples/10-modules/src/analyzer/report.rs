@@ -1,4 +1,4 @@
-//! Turn an [`Analysis`](super::Analysis) into a readable multi-line report.
+//! Turn an [`Analysis`] into a readable multi-line report.
 //!
 //! Sibling modules reach this via paths relative to `analyzer` — for example
 //! `report::format_report` from `mod.rs`. The function is `pub(crate)` so it

@@ -186,7 +186,11 @@ mod tests {
     fn common_password_is_very_weak() {
         let report = analyze_password("password");
         assert_eq!(report.strength, Strength::VeryWeak);
-        assert!(report.findings.contains(&"matches common password denylist"));
+        assert!(
+            report
+                .findings
+                .contains(&"matches common password denylist")
+        );
     }
 
     #[test]

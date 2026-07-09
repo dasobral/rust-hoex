@@ -45,7 +45,7 @@ pub fn validate_quantum_numbers(n: u8, l: u8, m: i8) -> Result<()> {
 ///
 /// Uses `E_n ≈ -13 / n²` eV so students see negative bound-state energies
 /// without floating-point noise. For precise values, prefer
-/// [`hydrogen_energy_level`](crate::utils::conversions::hydrogen_energy_level).
+/// [`hydrogen_energy_level`].
 pub fn approximate_energy_ev(n: u8) -> Result<i32> {
     if n == 0 {
         bail!("Principal quantum number n cannot be zero");
