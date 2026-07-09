@@ -1,0 +1,22 @@
+[package]
+name = "example_async"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Async/await with Tokio — simulated concurrent fetches (offline)"
+
+[dependencies]
+tokio = { workspace = true }
+
+[lib]
+name = "example_async"
+path = "src/lib.rs"
+
+[[bin]]
+name = "example_async"
+path = "src/main.rs"
+
+[lints]
+workspace = true

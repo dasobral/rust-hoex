@@ -1,0 +1,21 @@
+[package]
+name = "example_modules"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Code organization — multi-file crate with modules, visibility, and re-exports"
+
+[dependencies]
+
+[lib]
+name = "example_modules"
+path = "src/lib.rs"
+
+[[bin]]
+name = "example_modules"
+path = "src/main.rs"
+
+[lints]
+workspace = true

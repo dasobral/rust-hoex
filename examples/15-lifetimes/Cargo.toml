@@ -1,0 +1,21 @@
+[package]
+name = "example_lifetimes"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Advanced memory — lifetime annotations on functions and structs"
+
+[dependencies]
+
+[lib]
+name = "example_lifetimes"
+path = "src/lib.rs"
+
+[[bin]]
+name = "example_lifetimes"
+path = "src/main.rs"
+
+[lints]
+workspace = true

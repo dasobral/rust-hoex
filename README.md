@@ -1,236 +1,137 @@
 # Rust Hands-On EXamples (rust-hoex)
 
-A personal, non-official and beginner-friendly repository for learning Rust
+A personal, hands-on Rust tutorial. Progressive examples use cybersecurity-flavored scenarios (passwords, logs, threat scores, packet headers) so concepts stick while you learn the language.
+
+Requires **Rust 1.85+** (edition 2024).
 
 ## First steps
 
-If you have never used Rust before, you will probably need to install it in your system
-
 ```bash
-# Install rustup (Rust installer and version management tool)
+# Install rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-# Source the environment (or restart your terminal)
 source ~/.cargo/env
 
-# Verify installation
-rustc --version       # This is the compiler
-cargo --version       # This is the build system and package manager (like pip + make)
+# Verify
+rustc --version
+cargo --version
 
-# Install useful components
-rustup component add clippy    # Linter for catching common mistakes (normally automatically installed)
-rustup component add rustfmt   # Code formatter (normally automatically installed)
-rustup component add rust-src  # Source code for better IDE support
-
-# Optional but recommended: install rust-analyzer for IDE support
-# If using VS Code, install the "rust-analyzer" extension
+# Useful components (usually installed already)
+rustup component add clippy rustfmt rust-src
 ```
 
-## Repository Structure
+Optional: clone this repo, then run `./setup.sh` and add `source /path/to/rust-hoex/utils/aliases.sh` to your shell rc.
 
-```bash
+## Repository structure
+
+```text
 rust-hoex/
-├── README.md                 # Main project documentation
-├── LICENSE                   # MIT License
-├── .gitignore                # Rust-specific gitignore
-├── Cargo.toml                # Workspace configuration
-├── setup.sh                  # Environment setup script
-├── docs/                     # Learning documentation
-│   ├── 00-basics.md          # Installation and setup guide
-│   ├── 01-fundamentals.md    # Basic syntax and concepts
-│   └── ...
-├── examples/                 # Standalone example programs
-│   ├── 01-helloWorld/
-│   ├── 02-variables/
-│   ├── 03-functions/
-│   └── ...
-├── projects/                # Larger tutorial projects
-│   ├── cli-utils/           # Command-line applications
-│   ├── web-server/          # Basic web server
-│   ├── systems/             # Systems programming examples
-│   └── algorithms/          # Data structures and algorithms
-├── exercises/               # Coding challenges and exercises
-│   ├── rustlings/           # Rustlings exercises (if used)
-│   ├── advent-of-code/      # Advent of Code solutions
-│   └── custom/              # Custom practice problems
-├── benchmarks/              # Performance testing examples
-├── tests/                   # Integration tests
-└── utils/                   # Development utilities and scripts
-    ├── aliases.sh           # Aliases for creation commands
-    ├── creator.sh           # Automatic creation of examples, exercises and projects
-    └── check.sh             # Code quality check script
+├── Cargo.toml              # Workspace root
+├── docs/                   # Learning guides
+│   ├── 00-basics.md
+│   ├── 01-fundamentals.md
+│   ├── 02-intermediate.md
+│   ├── 03-advanced.md
+│   └── LEARNING_PATH.md
+├── examples/               # Progressive tutorial (01–23)
+├── exercises/              # Practice challenges
+│   └── 02-variables/       # Physics-themed advanced variables
+├── projects/               # Capstone work
+│   └── cli-tools/          # seccheck password-auditing CLI
+└── utils/
+    ├── aliases.sh
+    ├── check.sh
+    └── creator.sh
 ```
 
-## Learning Path Structure
+## Learning path
 
-### Phase 1: Fundamentals (examples/)
+Follow [docs/LEARNING_PATH.md](docs/LEARNING_PATH.md). Suggested loop for each example: read its README → `cargo run` → `cargo test` → try the README exercises → next.
 
-- **01-helloWorld**: First Rust program
-- **02-variables**: Variables, mutability, shadowing
-- **03-dataTypes**: Scalar and compound types
-- **04-functions**: Function syntax, parameters, return values
-- **05-controlFlow**: if/else, loops, match
-- **06-ownership**: Core Rust concept - ownership rules
-- **07-borrowing**: References and borrowing
-- **08-structs**: Custom data types
-- **09-enums**: Enums and pattern matching
-- **10-modules**: Code organization
+### Examples (01–23)
 
-### Phase 2: Intermediate Concepts
+| # | Directory | Package | One-liner |
+|---|-----------|---------|-----------|
+| 01 | `01-helloWorld` | `example_helloworld` | First program: `println!`, `format!`, lib vs bin |
+| 02 | `02-variables` | `example_variables` | Variables, mutability, shadowing (crypto entropy theme) |
+| 03 | `03-dataTypes` | `example_datatypes` | Scalar & compound types (packet headers) |
+| 04 | `04-functions` | `example_functions` | Function syntax (network checksums) |
+| 05 | `05-controlFlow` | `example_controlflow` | if/else, loops, match (threat-score classifier) |
+| 06 | `06-ownership` | `example_ownership` | Moves, Clone, Copy, Drop (secure passwords) |
+| 07 | `07-borrowing` | `example_borrowing` | References & borrowing without taking ownership |
+| 08 | `08-structs` | `example_structs` | Structs & methods (user/credential models) |
+| 09 | `09-enums` | `example_enums` | Enums & pattern matching (auth/network events) |
+| 10 | `10-modules` | `example_modules` | Modules, visibility, re-exports |
+| 11 | `11-collections` | `example_collections` | Vec, HashMap, HashSet (intrusion logs) |
+| 12 | `12-error-handling` | `example_errorhandling` | Option, Result, `?`, custom errors |
+| 13 | `13-generics` | `example_generics` | Generics & trait bounds (`SecureContainer`) |
+| 14 | `14-traits` | `example_traits` | Traits & static dispatch (`ThreatScorer`) |
+| 15 | `15-lifetimes` | `example_lifetimes` | Lifetime annotations on fns and structs |
+| 16 | `16-testing` | `example_testing` | Unit & integration tests (password policy) |
+| 17 | `17-iterators` | `example_iterators` | Iterator adapters (log lines & IPs) |
+| 18 | `18-closures` | `example_closures` | Closures for sorting/filtering threats |
+| 19 | `19-smart-pointers` | `example_smartpointers` | Box, Rc, RefCell (rule trees & shared config) |
+| 20 | `20-concurrency` | `example_concurrency` | Threads & mpsc (parallel log processing) |
+| 21 | `21-async` | `example_async` | Async/await with Tokio (offline simulated fetches) |
+| 22 | `22-macros` | `example_macros` | Declarative macros (`say!`, `testvec!`, …) |
+| 23 | `23-unsafe` | `example_unsafe` | Minimal unsafe: raw pointers + safe wrappers |
 
-- **11-collections**: Vec, HashMap, etc.
-- **12-error-handling**: Result and Option types
-- **13-generics**: Generic functions and structs
-- **14-traits**: Defining shared behavior
-- **15-lifetimes**: Advanced memory management
-- **16-testing**: Unit and integration tests
-- **17-iterators**: Functional programming concepts
-- **18-closures**: Anonymous functions
+### Exercise & project
 
-### Phase 3: Advanced Topics
+- **`exercises/02-variables`** (`exercise_variables`) — physics-themed advanced variables (signed ints, conversions, overflow)
+- **`projects/cli-tools`** (`project_cli_tools`) — **seccheck**, a password-auditing CLI capstone
 
-- **19-smart-pointers**: Box, Rc, RefCell
-- **20-concurrency**: Threads and message passing
-- **21-async**: Async/await programming
-- **22-macros**: Metaprogramming
-- **23-unsafe**: When and how to use unsafe code
+Guides: [docs/00-basics.md](docs/00-basics.md) → [01-fundamentals](docs/01-fundamentals.md) → [02-intermediate](docs/02-intermediate.md) → [03-advanced](docs/03-advanced.md)
 
-### Phase 4: Real-World Projects (projects/)
+## How to run
 
-- **cli-tools**: Command-line applications with `clap`
-- **web-server**: HTTP servers with `axum` or `warp`
-- **systems**: File I/O, network programming
-- **algorithms**: Performance-critical code
-- **embedded**: Basic embedded programming concepts
-
-## Workspace Configuration
-
-The root `Cargo.toml` defines a workspace to manage all sub-projects:
-
-```toml
-[workspace]
-resolver = "2"
-members = [
-    "examples/*/",
-    # Uncomment these as you create projects/exercises:
-    # "projects/*/",
-    # "exercises/*/",
-]
-
-[workspace.dependencies]
-# Common dependencies used across examples
-serde = { version = "1.0", features = ["derive"] }
-tokio = { version = "1.0", features = ["full"] }
-clap = { version = "4.0", features = ["derive"] }
-anyhow = "1.0"
-thiserror = "1.0"
-
-[workspace.lints.rust]
-unsafe_code = "forbid"
-
-[workspace.lints.clippy]
-enum_glob_use = "deny"
-pedantic = "warn"
-nursery = "warn"
-unwrap_used = "deny"
-```
-
-## Each Example Structure
-
-Each example follows a consistent pattern:
+From an example directory:
 
 ```bash
-examples/01-helloWorld/
-├── Cargo.toml           # Project configuration
-├── src/
-│   └── main.rs         # Source code
-├── README.md           # Example-specific documentation
-└── tests/              # Tests (if applicable)
-    └── integration.rs
+cd examples/01-helloWorld
+cargo run
+cargo test
 ```
 
-## Development Workflow
-
-### Initial Setup
-
-1. **Install Rust** (see First steps above)
-2. **Clone repository**: `git clone <repo> && cd rust-hoex`
-3. **Run setup**: `./setup.sh`
-4. **Load aliases permanently**: Add this line to your `~/.bashrc` or `~/.zshrc`:
-
-   ```bash
-   source /path/to/your/rust-hoex/utils/aliases.sh
-   ```
-
-Then restart your terminal or run `source ~/.bashrc`
-
-### Creating New Modules
-
-#### Option A: Direct Script Usage
+Or from the workspace root by package name:
 
 ```bash
-# Create a new example
-./utils/creator.sh example 01-helloWorld "Hello World program"
-
-# Create a new project  
-./utils/creator.sh project web-api "Simple REST API with axum"
-
-# Create a new exercise
-./utils/creator.sh exercise fizzbuzz "Classic FizzBuzz implementation"
+cargo run -p example_helloworld
+cargo test -p example_helloworld
 ```
 
-#### Option B: Using Aliases (Recommended)
+Same pattern for the exercise (`exercise_variables`) and project (`project_cli_tools`).
 
-After loading aliases, use these convenient commands:
+## Workspace commands
 
 ```bash
-# Module creation
-rust-example 01-helloWorld "Hello World program"
-rust-project web-api "Simple REST API with axum"
-rust-exercise fizzbuzz "Classic FizzBuzz implementation"
-
-# Development tasks
-rust-check    # Run quality checks (formatting, linting, tests)
-rust-test     # Run all tests in workspace
-rust-build    # Build entire workspace
-rust-fmt      # Format all code
-rust-clippy   # Run clippy linter on workspace
+cargo test --workspace          # all tests
+cargo build --workspace         # build everything
+cargo check --workspace         # fast compile check
+./utils/check.sh                # fmt + clippy (-D warnings) + tests + more
 ```
 
-## Available Aliases
+## Creating new modules
 
-After sourcing `utils/aliases.sh`, you get these commands:
+```bash
+./utils/creator.sh example 24-foo "Short description"
+./utils/creator.sh exercise bar "Practice problem"
+./utils/creator.sh project baz "Larger project"
+```
 
-**Module Creation:**
+Or after `source utils/aliases.sh`:
 
-- `rust-create <type> <n> [description]` - Generic module creator
-- `rust-example <n> [description]` - Create new example
-- `rust-exercise <n> [description]` - Create new exercise  
-- `rust-project <n> [description]` - Create new project
+```bash
+rust-example 24-foo "Short description"
+rust-exercise bar "Practice problem"
+rust-project baz "Larger project"
+rust-check    # ./utils/check.sh
+rust-test     # cargo test --workspace
+rust-build
+rust-fmt
+rust-clippy
+```
 
-**Development Tasks:**
-
-- `rust-check` - Run quality checks (formatting, linting, tests)
-- `rust-test` - Run all tests in workspace
-- `rust-build` - Build entire workspace
-- `rust-fmt` - Format all code
-- `rust-clippy` - Run clippy linter on workspace
-
-## Workflow
-
-1. **Setup**: Run `./setup.sh` to install dependencies
-2. **Development**: Work in individual example/project directories
-3. **Testing**: `cargo test` in workspace root runs all tests
-4. **Quality**: `./utils/check.sh` runs formatting, linting, and tests
-5. **Documentation**: Each example includes comprehensive README
-
-## Getting Started
-
-1. Install Rust: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-2. Clone and enter repository: `git clone <repo> && cd rust-hoex`
-3. Run setup: `./setup.sh`
-4. Create your first example: `./utils/creator.sh example 01-helloWorld "Hello World"`
-5. Start coding: `cd examples/01-helloWorld && cargo run`
+New scaffolds include a `todo!()` placeholder — replace it as you implement.
 
 ## Resources
 
@@ -238,13 +139,8 @@ After sourcing `utils/aliases.sh`, you get these commands:
 - [Rust by Example](https://doc.rust-lang.org/rust-by-example/)
 - [Rustlings](https://github.com/rust-lang/rustlings)
 - [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/)
+- [Cargo Book](https://doc.rust-lang.org/cargo/)
 
-## Contributing
+## License
 
-This is a learning repository, but contributions for improvements are welcome!
-Please ensure all examples:
-
-- Include comprehensive documentation
-- Follow Rust best practices
-- Include tests where appropriate
-- Are beginner-friendly with clear explanations
+MIT — see [LICENSE](LICENSE).

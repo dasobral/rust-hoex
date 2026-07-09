@@ -1,0 +1,21 @@
+[package]
+name = "example_smartpointers"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Box, Rc, and RefCell — recursive security-rule trees and shared config"
+
+[dependencies]
+
+[lib]
+name = "example_smartpointers"
+path = "src/lib.rs"
+
+[[bin]]
+name = "example_smartpointers"
+path = "src/main.rs"
+
+[lints]
+workspace = true

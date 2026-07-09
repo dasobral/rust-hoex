@@ -1,0 +1,21 @@
+[package]
+name = "example_structs"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Custom data types — user account / security credential structs with methods"
+
+[dependencies]
+
+[lib]
+name = "example_structs"
+path = "src/lib.rs"
+
+[[bin]]
+name = "example_structs"
+path = "src/main.rs"
+
+[lints]
+workspace = true

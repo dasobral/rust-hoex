@@ -1,0 +1,22 @@
+[package]
+name = "example_controlflow"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Threat-score log classifier — if/else, loops, and match in Rust"
+
+[dependencies]
+# No external dependencies — standard library only
+
+[lib]
+name = "example_controlflow"
+path = "src/lib.rs"
+
+[[bin]]
+name = "example_controlflow"
+path = "src/main.rs"
+
+[lints]
+workspace = true

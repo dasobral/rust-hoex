@@ -2,12 +2,10 @@
 resolver = "2"
 members = [
     "examples/*/",
-    "exercises/*/"
-    # Uncomment these as you create projects/exercises:
-    # "projects/*/"
+    "exercises/*/",
+    "projects/*/",
 ]
 
-# Exclude certain directories from the workspace if needed
 exclude = [
     "docs",
     "utils",
@@ -15,51 +13,33 @@ exclude = [
 ]
 
 [workspace.package]
-authors = ["Daniel SB <your-email@example.com>"]
-edition = "2021"
+authors = ["Daniel SB <dasobral93@gmail.com>"]
+edition = "2024"
 license = "MIT"
-repository = "https://github.com/yourusername/rust-hoex"
-rust-version = "1.70"
+repository = "https://github.com/dasobral/rust-hoex"
+rust-version = "1.85"
 
 [workspace.dependencies]
-# Common dependencies used across examples
-# Serialization
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-
-# Async runtime
 tokio = { version = "1.0", features = ["full"] }
-
-# Command-line parsing
 clap = { version = "4.0", features = ["derive"] }
-
-# Error handling
 anyhow = "1.0"
 thiserror = "1.0"
-
-# Networking
-reqwest = { version = "0.11", features = ["json"] }
-
-# Testing
+reqwest = { version = "0.12", features = ["json"] }
 criterion = "0.5"
-
-# Logging
 log = "0.4"
-env_logger = "0.10"
-
-# Utilities
+env_logger = "0.11"
 rand = "0.8"
 chrono = { version = "0.4", features = ["serde"] }
 
 [workspace.lints.rust]
-# Enforce safety by default
 unsafe_code = "forbid"
 unused_extern_crates = "warn"
 unused_import_braces = "warn"
 unused_qualifications = "warn"
 
 [workspace.lints.clippy]
-# Code quality lints
 enum_glob_use = "deny"
 pedantic = { level = "warn", priority = -1 }
 nursery = { level = "warn", priority = -1 }
@@ -68,8 +48,11 @@ expect_used = "warn"
 panic = "deny"
 todo = "warn"
 unimplemented = "warn"
-
-# Allow certain pedantic lints that can be overly strict for learning examples
 module_name_repetitions = "allow"
 similar_names = "allow"
 too_many_lines = "allow"
+# Learning-friendly allowances for tutorial code
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+must_use_candidate = "allow"
+return_self_not_must_use = "allow"

@@ -1,0 +1,23 @@
+[package]
+name = "project_cli_tools"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "seccheck — password entropy and strength CLI consolidating clap, Result, structs/enums, collections, and iterators"
+
+[dependencies]
+clap = { workspace = true }
+anyhow = { workspace = true }
+
+[lib]
+name = "project_cli_tools"
+path = "src/lib.rs"
+
+[[bin]]
+name = "project_cli_tools"
+path = "src/main.rs"
+
+[lints]
+workspace = true

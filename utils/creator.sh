@@ -62,9 +62,17 @@ validate_inputs() {
 # Function to convert name to valid Rust package name
 sanitize_package_name() {
     local name="$1"
+    local type="$2"
     # Remove leading digits and convert to valid package name
     # Replace hyphens with underscores, remove invalid characters
-    echo "$name" | sed 's/^[0-9]*-*//' | sed 's/-/_/g' | sed 's/[^a-zA-Z0-9_]//g' | tr '[:upper:]' '[:lower:]'
+    local base
+    base=$(echo "$name" | sed 's/^[0-9]*-*//' | sed 's/-/_/g' | sed 's/[^a-zA-Z0-9_]//g' | tr '[:upper:]' '[:lower:]')
+    # Prefix with type to avoid workspace package name collisions
+    # (e.g. examples/02-variables and exercises/02-variables)
+    if [ -z "$base" ]; then
+        base="module"
+    fi
+    echo "${type}_${base}"
 }
 
 # Function to create Cargo.toml
@@ -73,12 +81,9 @@ create_cargo_toml() {
     local type="$2"
     local description="$3"
     
-    # Generate a valid package name
-    local package_name=$(sanitize_package_name "$dir_name")
-    # If package name is empty after sanitization, use a default
-    if [ -z "$package_name" ]; then
-        package_name="${type}_example"
-    fi
+    # Generate a unique package name prefixed by type
+    local package_name
+    package_name=$(sanitize_package_name "$dir_name" "$type")
     
     cat > Cargo.toml << EOF
 [package]
@@ -101,6 +106,9 @@ description = "$description"
 [[bin]]
 name = "$package_name"
 path = "src/main.rs"
+
+[lints]
+workspace = true
 EOF
 }
 

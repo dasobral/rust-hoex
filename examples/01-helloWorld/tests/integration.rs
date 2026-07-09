@@ -1,9 +1,23 @@
-// Integration tests for 01-helloWorld
+//! Integration tests for `example_helloworld`.
+//!
+//! These tests link against the library crate (not the binary), which is why
+//! we put `greet` in `lib.rs`.
 
-// This is a simple test, replace by your integration tests as needed.
+use example_helloworld::greet;
 
 #[test]
-fn test_integration() {
-    // TODO: Add integration tests
-    assert_eq!(2 + 2, 4);
+fn greet_returns_expected_message() {
+    assert_eq!(greet("World"), "Hello, World!");
+}
+
+#[test]
+fn greet_preserves_unicode_names() {
+    assert_eq!(greet("世界"), "Hello, 世界!");
+}
+
+#[test]
+fn greet_is_not_empty_for_typical_input() {
+    let message = greet("Rust");
+    assert!(!message.is_empty());
+    assert!(message.contains("Rust"));
 }

@@ -1,0 +1,43 @@
+[package]
+name = "example_unsafe"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Minimal unsafe Rust — raw pointers with SAFETY docs and a safe wrapper"
+
+[dependencies]
+
+[lib]
+name = "example_unsafe"
+path = "src/lib.rs"
+
+[[bin]]
+name = "example_unsafe"
+path = "src/main.rs"
+
+# Cannot use `lints.workspace = true` and then override a lint — Cargo rejects
+# that. Mirror workspace lints here, but allow `unsafe_code` for this lesson.
+[lints.rust]
+unsafe_code = "allow" # This example intentionally teaches unsafe
+unused_extern_crates = "warn"
+unused_import_braces = "warn"
+unused_qualifications = "warn"
+
+[lints.clippy]
+enum_glob_use = "deny"
+pedantic = { level = "warn", priority = -1 }
+nursery = { level = "warn", priority = -1 }
+unwrap_used = "deny"
+expect_used = "warn"
+panic = "deny"
+todo = "warn"
+unimplemented = "warn"
+module_name_repetitions = "allow"
+similar_names = "allow"
+too_many_lines = "allow"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+must_use_candidate = "allow"
+return_self_not_must_use = "allow"
