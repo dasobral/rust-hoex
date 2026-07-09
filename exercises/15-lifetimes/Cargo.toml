@@ -1,0 +1,23 @@
+[package]
+name = "exercise_lifetimes"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Lifetimes exercises — borrowed excerpts and owned summaries for log analysis"
+
+[dependencies]
+clap = { workspace = true }
+anyhow = { workspace = true }
+
+[lib]
+name = "lifetimes_exercises"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exercise_lifetimes"
+path = "src/main.rs"
+
+[lints]
+workspace = true

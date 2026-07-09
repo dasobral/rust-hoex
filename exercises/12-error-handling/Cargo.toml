@@ -1,0 +1,24 @@
+[package]
+name = "exercise_errorhandling"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Error handling exercises — Option, Result, and custom errors for config validation"
+
+[dependencies]
+clap = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+
+[lib]
+name = "errorhandling_exercises"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exercise_errorhandling"
+path = "src/main.rs"
+
+[lints]
+workspace = true

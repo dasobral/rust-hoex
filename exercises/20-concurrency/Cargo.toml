@@ -1,0 +1,23 @@
+[package]
+name = "exercise_concurrency"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Parallel log processing with threads and mpsc channels"
+
+[dependencies]
+clap = { workspace = true }
+anyhow = { workspace = true }
+
+[lib]
+name = "concurrency_exercises"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exercise_concurrency"
+path = "src/main.rs"
+
+[lints]
+workspace = true

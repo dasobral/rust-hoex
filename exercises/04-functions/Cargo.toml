@@ -1,0 +1,23 @@
+[package]
+name = "exercise_functions"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Function exercises — network checksum helpers and sealed packets"
+
+[dependencies]
+clap = { workspace = true }
+anyhow = { workspace = true }
+
+[lib]
+name = "functions_exercises"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exercise_functions"
+path = "src/main.rs"
+
+[lints]
+workspace = true

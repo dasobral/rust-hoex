@@ -1,0 +1,23 @@
+[package]
+name = "exercise_structs"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Struct exercises — user accounts, credentials, and session tokens for security modeling"
+
+[dependencies]
+clap = { workspace = true }
+anyhow = { workspace = true }
+
+[lib]
+name = "structs_exercises"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exercise_structs"
+path = "src/main.rs"
+
+[lints]
+workspace = true

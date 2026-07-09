@@ -1,0 +1,23 @@
+[package]
+name = "exercise_ownership"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Ownership exercises — secure credential handling with moves, Clone, Copy, and Drop"
+
+[dependencies]
+clap = { workspace = true }
+anyhow = { workspace = true }
+
+[lib]
+name = "ownership_exercises"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exercise_ownership"
+path = "src/main.rs"
+
+[lints]
+workspace = true

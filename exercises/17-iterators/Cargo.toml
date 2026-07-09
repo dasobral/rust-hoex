@@ -1,0 +1,23 @@
+[package]
+name = "exercise_iterators"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Iterator adapter exercises — firewall log line processing"
+
+[dependencies]
+clap = { workspace = true }
+anyhow = { workspace = true }
+
+[lib]
+name = "iterators_exercises"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exercise_iterators"
+path = "src/main.rs"
+
+[lints]
+workspace = true

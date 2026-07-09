@@ -1,0 +1,23 @@
+[package]
+name = "exercise_testing"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Testing exercises — password policy rules with unit and integration tests"
+
+[dependencies]
+clap = { workspace = true }
+anyhow = { workspace = true }
+
+[lib]
+name = "testing_exercises"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exercise_testing"
+path = "src/main.rs"
+
+[lints]
+workspace = true

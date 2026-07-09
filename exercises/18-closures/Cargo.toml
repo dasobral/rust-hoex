@@ -1,0 +1,23 @@
+[package]
+name = "exercise_closures"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Closure exercises — threat event triage and filtering"
+
+[dependencies]
+clap = { workspace = true }
+anyhow = { workspace = true }
+
+[lib]
+name = "closures_exercises"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exercise_closures"
+path = "src/main.rs"
+
+[lints]
+workspace = true

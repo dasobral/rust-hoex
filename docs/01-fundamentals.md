@@ -1,19 +1,21 @@
 # Fundamentals
 
-Core language building blocks: variables, types, functions, control flow, ownership, and borrowing. Work through **examples 02–07** alongside this guide.
+Core language building blocks: variables, types, functions, control flow, ownership, and borrowing. Work through **examples 01–10** alongside this guide; each has a paired exercise under `exercises/`.
 
 ## Suggested order
 
-| Step | Example | Focus |
-|------|---------|--------|
-| 1 | [`02-variables`](../examples/02-variables/) | `let`, `mut`, shadowing, constants |
-| 2 | [`03-dataTypes`](../examples/03-dataTypes/) | Scalars, tuples, arrays |
-| 3 | [`04-functions`](../examples/04-functions/) | Parameters, returns, expressions |
-| 4 | [`05-controlFlow`](../examples/05-controlFlow/) | `if`, loops, `match` |
-| 5 | [`06-ownership`](../examples/06-ownership/) | Moves, `Clone`, `Copy`, `Drop` |
-| 6 | [`07-borrowing`](../examples/07-borrowing/) | `&T`, `&mut T`, borrow rules |
-
-Also skim [`01-helloWorld`](../examples/01-helloWorld/) if you have not run a Rust program yet. Structs, enums, and modules (08–10) sit between fundamentals and intermediate — do them before collections.
+| Step | Example | Exercise | Focus |
+|------|---------|----------|--------|
+| 1 | [`01-helloWorld`](../examples/01-helloWorld/) | [`exercises/01-helloWorld`](../exercises/01-helloWorld/) | First program, `format!` |
+| 2 | [`02-variables`](../examples/02-variables/) | [`exercises/02-variables`](../exercises/02-variables/) | `let`, `mut`, shadowing, overflow |
+| 3 | [`03-dataTypes`](../examples/03-dataTypes/) | [`exercises/03-dataTypes`](../exercises/03-dataTypes/) | Scalars, tuples, arrays |
+| 4 | [`04-functions`](../examples/04-functions/) | [`exercises/04-functions`](../exercises/04-functions/) | Parameters, returns, expressions |
+| 5 | [`05-controlFlow`](../examples/05-controlFlow/) | [`exercises/05-controlFlow`](../exercises/05-controlFlow/) | `if`, loops, `match` |
+| 6 | [`06-ownership`](../examples/06-ownership/) | [`exercises/06-ownership`](../exercises/06-ownership/) | Moves, `Clone`, `Copy`, `Drop` |
+| 7 | [`07-borrowing`](../examples/07-borrowing/) | [`exercises/07-borrowing`](../exercises/07-borrowing/) | `&T`, `&mut T`, borrow rules |
+| 8 | [`08-structs`](../examples/08-structs/) | [`exercises/08-structs`](../exercises/08-structs/) | Custom types & methods |
+| 9 | [`09-enums`](../examples/09-enums/) | [`exercises/09-enums`](../exercises/09-enums/) | Enums & pattern matching |
+| 10 | [`10-modules`](../examples/10-modules/) | [`exercises/10-modules`](../exercises/10-modules/) | Modules & visibility |
 
 ## Practical tips
 
@@ -36,22 +38,19 @@ Also skim [`01-helloWorld`](../examples/01-helloWorld/) if you have not run a Ru
 
 ## How to practice
 
-For each example:
+For each topic:
 
 1. Read the example README
-2. `cargo run` (or `cargo run -p example_<name>`)
-3. `cargo test`
-4. Try the exercises listed in that README
-5. Move on
-
-After 02–07, optionally tackle [`exercises/02-variables`](../exercises/02-variables/) for deeper practice with integers and overflow.
+2. `cargo run` / `cargo test` on the example
+3. Run the paired exercise (`cargo run -p exercise_<name> -- list`)
+4. Move on
 
 ## The Rust Book
 
 - [Ch 3 — Common Programming Concepts](https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html) (variables, types, functions, control flow)
 - [Ch 4 — Understanding Ownership](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
-- [Ch 5 — Structs](https://doc.rust-lang.org/book/ch05-00-structs.html) (pairs with example 08)
-- [Ch 6 — Enums and Pattern Matching](https://doc.rust-lang.org/book/ch06-00-enums.html) (pairs with example 09)
-- [Ch 7 — Packages, Crates, Modules](https://doc.rust-lang.org/book/ch07-00-managing-growing-projects.html) (pairs with example 10)
+- [Ch 5 — Structs](https://doc.rust-lang.org/book/ch05-00-structs.html)
+- [Ch 6 — Enums and Pattern Matching](https://doc.rust-lang.org/book/ch06-00-enums.html)
+- [Ch 7 — Packages, Crates, Modules](https://doc.rust-lang.org/book/ch07-00-managing-growing-projects.html)
 
 Next: [02-intermediate.md](02-intermediate.md)
