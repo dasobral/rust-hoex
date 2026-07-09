@@ -44,7 +44,15 @@ For each example:
 4. Try the exercises listed in that README
 5. Move on
 
-After 02–07, optionally tackle [`exercises/02-variables`](../exercises/02-variables/) for deeper practice with integers and overflow.
+After each matching example, optionally tackle the paired exercise crate:
+
+| After example | Exercise |
+|---------------|----------|
+| 02 | [`exercises/02-variables`](../exercises/02-variables/) — integers, overflow, conversions |
+| 06 | [`exercises/06-ownership`](../exercises/06-ownership/) — moves, Clone, Copy, zeroize |
+| 07 | [`exercises/07-borrowing`](../exercises/07-borrowing/) — `&` / `&mut`, slices |
+| 08 | [`exercises/08-structs`](../exercises/08-structs/) — UserAccount / Session |
+| 09 | [`exercises/09-enums`](../exercises/09-enums/) — AuthStatus / NetworkEvent |
 
 ## The Rust Book
 

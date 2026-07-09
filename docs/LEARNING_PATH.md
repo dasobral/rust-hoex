@@ -35,7 +35,13 @@ Guide: [01-fundamentals.md](01-fundamentals.md)
 - [ ] `09-enums` — enums & pattern matching
 - [ ] `10-modules` — modules & visibility
 
-**Practice:** [ ] `exercises/02-variables` (physics-themed advanced variables)
+**Practice (after the matching example):**
+
+- [ ] `exercises/02-variables` — physics-themed advanced variables
+- [ ] `exercises/06-ownership` — moves, Clone, Copy, zeroize
+- [ ] `exercises/07-borrowing` — references, slices, strength scoring
+- [ ] `exercises/08-structs` — UserAccount / Session models
+- [ ] `exercises/09-enums` — AuthStatus, NetworkEvent, HttpStatus
 
 ## 2. Intermediate
 
@@ -49,6 +55,12 @@ Guide: [02-intermediate.md](02-intermediate.md)
 - [ ] `16-testing`
 - [ ] `17-iterators`
 - [ ] `18-closures`
+
+**Practice:**
+
+- [ ] `exercises/11-collections` — intrusion log aggregator
+- [ ] `exercises/12-error-handling` — config/credential Result flows
+- [ ] `exercises/14-traits` — ThreatScorer implementations
 
 ## 3. Advanced
 
@@ -86,4 +98,11 @@ cargo test --workspace
 |------|-----------|
 | `examples/01-helloWorld` … `23-unsafe` | `example_helloworld` … `example_unsafe` (see root README table) |
 | `exercises/02-variables` | `exercise_variables` |
+| `exercises/06-ownership` | `exercise_ownership` |
+| `exercises/07-borrowing` | `exercise_borrowing` |
+| `exercises/08-structs` | `exercise_structs` |
+| `exercises/09-enums` | `exercise_enums` |
+| `exercises/11-collections` | `exercise_collections` |
+| `exercises/12-error-handling` | `exercise_errorhandling` |
+| `exercises/14-traits` | `exercise_traits` |
 | `projects/cli-tools` | `project_cli_tools` |

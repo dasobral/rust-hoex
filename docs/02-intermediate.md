@@ -40,6 +40,14 @@ Collections, errors, generics, traits, lifetimes, testing, iterators, and closur
 
 Same loop as fundamentals: README → `cargo run` → `cargo test` → README exercises → next example.
 
+Paired exercise crates (run after the matching example):
+
+| After example | Exercise |
+|---------------|----------|
+| 11 | [`exercises/11-collections`](../exercises/11-collections/) — IntrusionLog aggregator |
+| 12 | [`exercises/12-error-handling`](../exercises/12-error-handling/) — ConfigError / bootstrap |
+| 14 | [`exercises/14-traits`](../exercises/14-traits/) — ThreatScorer practice |
+
 ## The Rust Book
 
 - [Ch 8 — Common Collections](https://doc.rust-lang.org/book/ch08-00-common-collections.html)

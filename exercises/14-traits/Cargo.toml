@@ -1,0 +1,23 @@
+[package]
+name = "exercise_traits"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Traits exercises — ThreatScorer trait practice for security event scoring"
+
+[dependencies]
+clap = { workspace = true }
+anyhow = { workspace = true }
+
+[lib]
+name = "traits_exercises"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exercise_traits"
+path = "src/main.rs"
+
+[lints]
+workspace = true

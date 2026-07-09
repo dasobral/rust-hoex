@@ -1,0 +1,23 @@
+[package]
+name = "exercise_borrowing"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Borrowing exercises — inspect and update passwords without taking ownership"
+
+[dependencies]
+clap = { workspace = true }
+anyhow = { workspace = true }
+
+[lib]
+name = "borrowing_exercises"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exercise_borrowing"
+path = "src/main.rs"
+
+[lints]
+workspace = true

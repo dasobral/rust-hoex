@@ -1,0 +1,23 @@
+[package]
+name = "exercise_enums"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Enum exercises — auth status, network events, HTTP codes, and token handling"
+
+[dependencies]
+clap = { workspace = true }
+anyhow = { workspace = true }
+
+[lib]
+name = "enums_exercises"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exercise_enums"
+path = "src/main.rs"
+
+[lints]
+workspace = true

@@ -33,8 +33,15 @@ rust-hoex/
 │   ├── 03-advanced.md
 │   └── LEARNING_PATH.md
 ├── examples/               # Progressive tutorial (01–23)
-├── exercises/              # Practice challenges
-│   └── 02-variables/       # Physics-themed advanced variables
+├── exercises/              # Practice challenges (paired with examples)
+│   ├── 02-variables/       # Physics-themed advanced variables
+│   ├── 06-ownership/       # Moves, Clone, Copy, zeroize
+│   ├── 07-borrowing/       # References & slices
+│   ├── 08-structs/         # User/session models
+│   ├── 09-enums/           # Auth & network events
+│   ├── 11-collections/     # Intrusion log aggregator
+│   ├── 12-error-handling/  # Config/credential Result flows
+│   └── 14-traits/          # ThreatScorer practice
 ├── projects/               # Capstone work
 │   └── cli-tools/          # seccheck password-auditing CLI
 └── utils/
@@ -75,9 +82,19 @@ Follow [docs/LEARNING_PATH.md](docs/LEARNING_PATH.md). Suggested loop for each e
 | 22 | `22-macros` | `example_macros` | Declarative macros (`say!`, `testvec!`, …) |
 | 23 | `23-unsafe` | `example_unsafe` | Minimal unsafe: raw pointers + safe wrappers |
 
-### Exercise & project
+### Exercises & project
 
-- **`exercises/02-variables`** (`exercise_variables`) — physics-themed advanced variables (signed ints, conversions, overflow)
+| Directory | Package | Pairs with | Focus |
+|-----------|---------|------------|--------|
+| `exercises/02-variables` | `exercise_variables` | example 02 | Signed ints, overflow, conversions (physics) |
+| `exercises/06-ownership` | `exercise_ownership` | example 06 | Moves, Clone, Copy, zeroize-before-drop |
+| `exercises/07-borrowing` | `exercise_borrowing` | example 07 | `&` / `&mut`, slices, password policy scoring |
+| `exercises/08-structs` | `exercise_structs` | example 08 | UserAccount, Session, lockout |
+| `exercises/09-enums` | `exercise_enums` | example 09 | AuthStatus, NetworkEvent, HttpStatus |
+| `exercises/11-collections` | `exercise_collections` | example 11 | IntrusionLog: Vec / HashMap / HashSet |
+| `exercises/12-error-handling` | `exercise_errorhandling` | example 12 | ConfigError, `?`, allow-listed paths |
+| `exercises/14-traits` | `exercise_traits` | example 14 | ThreatScorer, default methods, bounds |
+
 - **`projects/cli-tools`** (`project_cli_tools`) — **seccheck**, a password-auditing CLI capstone
 
 Guides: [docs/00-basics.md](docs/00-basics.md) → [01-fundamentals](docs/01-fundamentals.md) → [02-intermediate](docs/02-intermediate.md) → [03-advanced](docs/03-advanced.md)
@@ -99,7 +116,7 @@ cargo run -p example_helloworld
 cargo test -p example_helloworld
 ```
 
-Same pattern for the exercise (`exercise_variables`) and project (`project_cli_tools`).
+Same pattern for exercises (`exercise_variables`, `exercise_ownership`, …) and the project (`project_cli_tools`).
 
 ## Workspace commands
 
