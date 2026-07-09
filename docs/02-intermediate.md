@@ -1,19 +1,19 @@
 # Intermediate
 
-Collections, errors, generics, traits, lifetimes, testing, iterators, and closures. Work through **examples 11–18**. Finish 08–10 (structs, enums, modules) first if you skipped them.
+Collections, errors, generics, traits, lifetimes, testing, iterators, and closures. Work through **examples 11–18**. Finish 08–10 (structs, enums, modules) first if you skipped them. Each topic has a paired exercise.
 
 ## Suggested order
 
-| Step | Example | Focus |
-|------|---------|--------|
-| 1 | [`11-collections`](../examples/11-collections/) | `Vec`, `HashMap`, `HashSet` |
-| 2 | [`12-error-handling`](../examples/12-error-handling/) | `Option`, `Result`, `?`, custom errors |
-| 3 | [`13-generics`](../examples/13-generics/) | Type parameters & bounds |
-| 4 | [`14-traits`](../examples/14-traits/) | Shared behavior, static dispatch |
-| 5 | [`15-lifetimes`](../examples/15-lifetimes/) | Lifetime annotations |
-| 6 | [`16-testing`](../examples/16-testing/) | Unit & integration tests |
-| 7 | [`17-iterators`](../examples/17-iterators/) | Adapters: `map`, `filter`, `collect`, … |
-| 8 | [`18-closures`](../examples/18-closures/) | `|x| …`, capture modes |
+| Step | Example | Exercise | Focus |
+|------|---------|----------|--------|
+| 1 | [`11-collections`](../examples/11-collections/) | [`exercises/11-collections`](../exercises/11-collections/) | `Vec`, `HashMap`, `HashSet` |
+| 2 | [`12-error-handling`](../examples/12-error-handling/) | [`exercises/12-error-handling`](../exercises/12-error-handling/) | `Option`, `Result`, `?`, custom errors |
+| 3 | [`13-generics`](../examples/13-generics/) | [`exercises/13-generics`](../exercises/13-generics/) | Type parameters & bounds |
+| 4 | [`14-traits`](../examples/14-traits/) | [`exercises/14-traits`](../exercises/14-traits/) | Shared behavior, static dispatch |
+| 5 | [`15-lifetimes`](../examples/15-lifetimes/) | [`exercises/15-lifetimes`](../exercises/15-lifetimes/) | Lifetime annotations |
+| 6 | [`16-testing`](../examples/16-testing/) | [`exercises/16-testing`](../exercises/16-testing/) | Unit & integration tests |
+| 7 | [`17-iterators`](../examples/17-iterators/) | [`exercises/17-iterators`](../exercises/17-iterators/) | Adapters: `map`, `filter`, `collect`, … |
+| 8 | [`18-closures`](../examples/18-closures/) | [`exercises/18-closures`](../exercises/18-closures/) | `|x| …`, capture modes |
 
 ## Practical tips
 
@@ -38,15 +38,7 @@ Collections, errors, generics, traits, lifetimes, testing, iterators, and closur
 
 ## How to practice
 
-Same loop as fundamentals: README → `cargo run` → `cargo test` → README exercises → next example.
-
-Paired exercise crates (run after the matching example):
-
-| After example | Exercise |
-|---------------|----------|
-| 11 | [`exercises/11-collections`](../exercises/11-collections/) — IntrusionLog aggregator |
-| 12 | [`exercises/12-error-handling`](../exercises/12-error-handling/) — ConfigError / bootstrap |
-| 14 | [`exercises/14-traits`](../exercises/14-traits/) — ThreatScorer practice |
+Same loop as fundamentals: example README → `cargo run` → `cargo test` → paired exercise → next topic.
 
 ## The Rust Book
 

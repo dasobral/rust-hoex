@@ -20,12 +20,13 @@ documented in `CLAUDE.md` and `README.md`; use those rather than re-deriving the
 - Workspace members: `examples/*/`, `exercises/*/`, `projects/*/`. Package names
   are unique (`example_*`, `exercise_*`, `project_*`); workspace-level cargo
   commands load correctly.
-- Tutorial content: examples `01-helloWorld`–`23-unsafe`; exercises for
-  variables, ownership, borrowing, structs, enums, collections, error-handling,
-  and traits; project `cli-tools` (seccheck). Learning docs live under `docs/`
-  (`00-basics` through `03-advanced`, plus `LEARNING_PATH.md`).
+- Tutorial content: examples `01-helloWorld`–`23-unsafe` with a matching
+  exercise crate under the same directory name for each topic; project
+  `cli-tools` (seccheck). Learning docs live under `docs/` (`00-basics`
+  through `03-advanced`, plus `LEARNING_PATH.md`).
 - Package names stay unique (`example_*` / `exercise_*` / `project_*`) — do not
-  rename back to bare names (workspace collisions).
+  rename back to bare names (workspace collisions). `exercise_unsafe` (like
+  `example_unsafe`) locally allows `unsafe_code`.
 - `./utils/check.sh` (fmt, clippy with `-D warnings`, tests, etc.) is expected
   to pass. Prefer it (or the commands in `README.md` / `CLAUDE.md`) before
   claiming a change is clean.

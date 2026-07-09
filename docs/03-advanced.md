@@ -4,13 +4,13 @@ Smart pointers, concurrency, async, macros, and unsafe. Work through **examples 
 
 ## Suggested order
 
-| Step | Example | Focus |
-|------|---------|--------|
-| 1 | [`19-smart-pointers`](../examples/19-smart-pointers/) | `Box`, `Rc`, `RefCell` |
-| 2 | [`20-concurrency`](../examples/20-concurrency/) | Threads, `mpsc` |
-| 3 | [`21-async`](../examples/21-async/) | `async`/`await`, Tokio |
-| 4 | [`22-macros`](../examples/22-macros/) | Declarative `macro_rules!` |
-| 5 | [`23-unsafe`](../examples/23-unsafe/) | Raw pointers & safe wrappers |
+| Step | Example | Exercise | Focus |
+|------|---------|----------|--------|
+| 1 | [`19-smart-pointers`](../examples/19-smart-pointers/) | [`exercises/19-smart-pointers`](../exercises/19-smart-pointers/) | `Box`, `Rc`, `RefCell` |
+| 2 | [`20-concurrency`](../examples/20-concurrency/) | [`exercises/20-concurrency`](../exercises/20-concurrency/) | Threads, `mpsc` |
+| 3 | [`21-async`](../examples/21-async/) | [`exercises/21-async`](../exercises/21-async/) | `async`/`await`, Tokio |
+| 4 | [`22-macros`](../examples/22-macros/) | [`exercises/22-macros`](../exercises/22-macros/) | Declarative `macro_rules!` |
+| 5 | [`23-unsafe`](../examples/23-unsafe/) | [`exercises/23-unsafe`](../exercises/23-unsafe/) | Raw pointers & safe wrappers |
 
 Capstone after this track: [`projects/cli-tools`](../projects/cli-tools/) (**seccheck**).
 
@@ -48,7 +48,7 @@ If you are unsure whether you need `unsafe`, you almost certainly do not.
 
 ## How to practice
 
-README → `cargo run` → `cargo test` → README exercises → next. For 23, read every `SAFETY` comment before changing anything.
+Example README → `cargo run` → `cargo test` → paired exercise → next. For 23, read every `SAFETY` comment before changing anything.
 
 ## The Rust Book
 

@@ -1,0 +1,23 @@
+[package]
+name = "exercise_datatypes"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Data type exercises — packet header scalars, compounds, and port fields"
+
+[dependencies]
+clap = { workspace = true }
+anyhow = { workspace = true }
+
+[lib]
+name = "datatypes_exercises"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exercise_datatypes"
+path = "src/main.rs"
+
+[lints]
+workspace = true

@@ -1,0 +1,24 @@
+[package]
+name = "exercise_async"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Async threat intel fetches with Tokio — offline simulated latency"
+
+[dependencies]
+tokio = { workspace = true }
+clap = { workspace = true }
+anyhow = { workspace = true }
+
+[lib]
+name = "async_exercises"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exercise_async"
+path = "src/main.rs"
+
+[lints]
+workspace = true

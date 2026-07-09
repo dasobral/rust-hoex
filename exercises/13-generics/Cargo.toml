@@ -1,0 +1,23 @@
+[package]
+name = "exercise_generics"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Generics exercises — SecureContainer, Pair, and find_min for security data"
+
+[dependencies]
+clap = { workspace = true }
+anyhow = { workspace = true }
+
+[lib]
+name = "generics_exercises"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exercise_generics"
+path = "src/main.rs"
+
+[lints]
+workspace = true

@@ -1,0 +1,23 @@
+[package]
+name = "exercise_smartpointers"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Smart pointer exercises — recursive policy rules with Rc and RefCell"
+
+[dependencies]
+clap = { workspace = true }
+anyhow = { workspace = true }
+
+[lib]
+name = "smartpointers_exercises"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exercise_smartpointers"
+path = "src/main.rs"
+
+[lints]
+workspace = true

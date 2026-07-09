@@ -231,6 +231,15 @@ name = "example_variables"
 version = "0.1.0"
 
 [[package]]
+name = "exercise_async"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+ "tokio",
+]
+
+[[package]]
 name = "exercise_borrowing"
 version = "0.1.0"
 dependencies = [
@@ -239,7 +248,39 @@ dependencies = [
 ]
 
 [[package]]
+name = "exercise_closures"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+]
+
+[[package]]
 name = "exercise_collections"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+]
+
+[[package]]
+name = "exercise_concurrency"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+]
+
+[[package]]
+name = "exercise_controlflow"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+]
+
+[[package]]
+name = "exercise_datatypes"
 version = "0.1.0"
 dependencies = [
  "anyhow",
@@ -264,7 +305,71 @@ dependencies = [
 ]
 
 [[package]]
+name = "exercise_functions"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+]
+
+[[package]]
+name = "exercise_generics"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+]
+
+[[package]]
+name = "exercise_helloworld"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+]
+
+[[package]]
+name = "exercise_iterators"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+]
+
+[[package]]
+name = "exercise_lifetimes"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+]
+
+[[package]]
+name = "exercise_macros"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+]
+
+[[package]]
+name = "exercise_modules"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+]
+
+[[package]]
 name = "exercise_ownership"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+]
+
+[[package]]
+name = "exercise_smartpointers"
 version = "0.1.0"
 dependencies = [
  "anyhow",
@@ -280,7 +385,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "exercise_testing"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+]
+
+[[package]]
 name = "exercise_traits"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+]
+
+[[package]]
+name = "exercise_unsafe"
 version = "0.1.0"
 dependencies = [
  "anyhow",
