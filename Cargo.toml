@@ -3,7 +3,7 @@ resolver = "2"
 members = [
     "examples/*/",
     "exercises/*/",
-    # "projects/*/",  # uncomment when projects exist
+    "projects/*/",
 ]
 
 exclude = [

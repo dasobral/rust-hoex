@@ -215,6 +215,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "project_cli_tools"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+]
+
+[[package]]
 name = "quote"
 version = "1.0.46"
 source = "registry+https://github.com/rust-lang/crates.io-index"
