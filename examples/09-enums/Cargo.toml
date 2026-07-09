@@ -1,0 +1,21 @@
+[package]
+name = "example_enums"
+version = "0.1.0"
+edition = "2024"
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Enums and pattern matching — auth results, network events, and HTTP-like status"
+
+[dependencies]
+
+[lib]
+name = "example_enums"
+path = "src/lib.rs"
+
+[[bin]]
+name = "example_enums"
+path = "src/main.rs"
+
+[lints]
+workspace = true
