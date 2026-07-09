@@ -85,7 +85,7 @@ let brute_force_attempts_per_second: u64 = 1_000_000_000;
 ```rust
 // Constants - known at compile time, never change
 const MIN_SECURE_ENTROPY: f64 = 50.0;     // Security standard
-const MAX_PASSWORD_LENGTH: usize = 256;    // System limit
+const MAX_PASSWORD_LENGTH: usize = 256;    // System limit (characters)
 
 // Variables - computed at runtime, may change
 let entropy_threshold = MIN_SECURE_ENTROPY; // Runtime calculation
